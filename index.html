@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+
+  <!-- Search Section -->
+  <div class="max-w-xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Search for Clothing</h1>
+    <div class="relative">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search for clothing..."
+        class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+      />
+      <div id="search-results" class="absolute bg-white w-full border rounded-md mt-2 shadow-lg z-10 hidden">
+        <ul id="results-list" class="divide-y divide-gray-200"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Selected Product Section -->
+  <div id="selected-product" class="max-w-2xl mx-auto mt-10 hidden">
+    <h2 class="text-xl font-semibold mb-4">Product Details</h2>
+    <div class="border rounded-md p-4 bg-white shadow-md">
+      <h3 id="fallback-text" class="text-lg text-gray-500 hidden">Your product is shown here</h3>
+      <img id="product-image" class="w-full h-96 object-contain rounded-md mb-4 hidden" alt="Product Image">
+      <h3 id="product-name" class="text-2xl font-bold mb-2"></h3>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
